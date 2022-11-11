@@ -1,8 +1,8 @@
 <button color="primary" class="mt-40" (click)="addFieldValue()">Add New</button>
 <div class="control-section">
-  <ejs-grid #normalgrid [dataSource]="data1" height="350">
+  <ejs-grid #normalgrid [dataSource]="data1" height="350" [allowRowDragAndDrop]='true'>
     <e-columns>
-      <e-column field="text" headerText="Customer ID" width="150">
+      <e-column field="text" width="150">
         <ng-template let-data #template>
           <ejs-dropdownlist
             id="text"

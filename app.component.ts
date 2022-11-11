@@ -39,11 +39,6 @@ export class AppComponent {
 
   newAttribute: any = {};
 
-  addFieldValue() {
-    this.data1.push(this.newAttribute);
-    this.newAttribute = {};
-  }
-
   ngOnInit(): void {
     this.data1 = [
       {
@@ -53,5 +48,11 @@ export class AppComponent {
         text: 'f83c2c2a-d921-476a-b10d-2b9158ded9b2',
       },
     ];
+  }
+
+  addFieldValue() {
+    this.data1.push(this.newAttribute);
+    this.newAttribute = {};
+    this.ngOnInit();
   }
 }
