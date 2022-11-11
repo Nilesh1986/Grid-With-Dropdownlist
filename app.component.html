@@ -1,0 +1,20 @@
+<button color="primary" class="mt-40" (click)="addFieldValue()">Add New</button>
+<div class="control-section">
+  <ejs-grid #normalgrid [dataSource]="data1" height="350">
+    <e-columns>
+      <e-column field="text" headerText="Customer ID" width="150">
+        <ng-template let-data #template>
+          <ejs-dropdownlist
+            id="text"
+            [dataSource]="dataApplied"
+            [(ngModel)]="data.text"
+            popupHeight="300px"
+            [fields]="fields"
+            value="{{ data.text }}"
+          >
+          </ejs-dropdownlist>
+        </ng-template>
+      </e-column>
+    </e-columns>
+  </ejs-grid>
+</div>
